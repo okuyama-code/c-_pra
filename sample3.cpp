@@ -1,33 +1,32 @@
 #include <iostream>
 
-// ジャンプ：プログラムの実行位置を移動する
-// - break：ループや switch 文から抜け出す
-// - continue：ループの残りの処理をスキップして次の繰り返しへ
-// - return：関数から値を返して終了する
+// ループ
 
-// 条件分岐
 int main() {
-  int score = 85;
-
-  // if-else文
-  if (score >= 90) {
-      std::cout << "Grade: A" << std::endl;
-  } else if (score >= 80) {
-      std::cout << "Grade: B" << std::endl;
-  } else if (score >= 70) {
-      std::cout << "Grade: C" << std::endl;
-  } else {
-      std::cout << "Grade: D" << std::endl;
+  // for ループ
+  std::cout << "For Loop:" << std::endl;
+  for (int i = 0; i < 5; i++) {
+    std::cout << i << " ";
   }
+  std::cout << std::endl; // => 0 1 2 3 4
 
-  // switch分
-  // break の役割： case で条件に一致した部分を実行した後、switch 文全体から抜け出します。 もし break がないと、その下にある全ての case の処理も続けて実行されてしまいます（これを「フォールスルー」と呼びます）
-  int day = 3;
-  switch (day) {
-    case 1:
-      std::cout << "monday" << std::endl;
-      break;
+  // while ループ
+  std::cout << "While Loop:" << std::endl;
+  int j = 0;
+  while (j < 9) {
+    std::cout << j << " ";
+    j ++;
   }
+  std::cout << std::endl; // => 0 1 2 3 4 5 6 7 8
+
+  // do-while ループ
+  std::cout << "Do-while Loop:" << std::endl;
+  int k = 0;
+  do {
+    std:: cout << k << " ";
+    k++;
+  } while (k < 6);
+  std::cout << std::endl; // => 0 1 2 3 4 5
 
   return 0;
 }

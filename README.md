@@ -5,10 +5,10 @@
 cd ファイルのあるディレクトリ
 
 # コンパイル
-g++ -o main main.cpp
+g++ -std=c++11 sample7.cpp -o pro
 
 # 実行
-./main
+./pro
 ```
 
 2. 「Code Runner」拡張機能を使用する場合

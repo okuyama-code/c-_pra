@@ -1,31 +1,42 @@
 #include <iostream>
 
-// 演算子
+// ジャンプ：プログラムの実行位置を移動する
+// - break：ループや switch 文から抜け出す
+// - continue：ループの残りの処理をスキップして次の繰り返しへ
+// - return：関数から値を返して終了する
 
+// 条件分岐
 int main() {
-  int a = 10, b = 3;
+  int score = 85;
 
-   // 算術演算子
-    std::cout << "a + b = " << a + b << std::endl;  // 加算
-    std::cout << "a - b = " << a - b << std::endl;  // 減算
-    std::cout << "a * b = " << a * b << std::endl;  // 乗算
-    std::cout << "a / b = " << a / b << std::endl;  // 整数除算（結果：3）
-    std::cout << "a % b = " << a % b << std::endl;  // 剰余（余り）
+  // if-else文
+  if (score >= 90) {
+      std::cout << "Grade: A" << std::endl;
+  } else if (score >= 80) {
+      std::cout << "Grade: B" << std::endl;
+  } else if (score >= 70) {
+      std::cout << "Grade: C" << std::endl;
+  } else {
+      std::cout << "Grade: D" << std::endl;
+  }
 
-    // C++では論理演算の結果として 1（真）と 0（偽）が返ってくる
-    // boolalphaを使うと、true/falseとして表示される
-    // std::cout << std::boolalpha;
-
-    // 比較演算子
-    std::cout << "a == b: " << (a == b) << std::endl;  // => 0 等しい
-    std::cout << "a != b: " << (a != b) << std::endl;  // => 1 等しくない
-    std::cout << "a > b: " << (a > b) << std::endl;    // => 1 より大きい
-
-    // 論理演算子
-    bool x = true, y = false;
-    std::cout << "x && y: " << (x && y) << std::endl;  // => 0 AND
-    std::cout << "x || y: " << (x || y) << std::endl;  // => 1 OR
-    std::cout << "!x: " << (!x) << std::endl;         //  => 0 NOT
+  // switch分
+  // break の役割： case で条件に一致した部分を実行した後、switch 文全体から抜け出します。 もし break がないと、その下にある全ての case の処理も続けて実行されてしまいます（これを「フォールスルー」と呼びます）
+  int day = 2;
+  switch (day) {
+    case 1:
+      std::cout << "Monday" << std::endl;
+      break;
+    case 2:
+      std::cout << "Tuesday" << std::endl;
+      break;
+    case 3:
+      std::cout << "Wednesday" << std::endl;
+      break;
+    // 他の曜日も同様に...
+    default:
+      std::cout << "Invalid day" << std::endl;
+  }
 
   return 0;
 }
