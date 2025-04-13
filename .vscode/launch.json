@@ -7,7 +7,7 @@
       "request": "launch",
       "args": [],
       "cwd": "/Users/okuyama/dev/c++_pra",
-      "program": "${fileDirname}/${fileBasenameNoExtension}"
+      "program": "/Users/okuyama/dev/c++_pra/build/Debug/outDebug"
     }
   ]
 }

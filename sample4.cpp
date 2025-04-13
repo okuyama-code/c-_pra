@@ -1,32 +1,44 @@
 #include <iostream>
+#include <string>
 
-// ループ
+// 関数
+
+// 関数のプロトタイプ宣言
+int add(int a, int b);
+void greet(std::string name);
+double calculateAverage(int arr[], int size);
+
 
 int main() {
-  // for ループ
-  std::cout << "For Loop:" << std::endl;
-  for (int i = 0; i < 5; i++) {
-    std::cout << i << " ";
-  }
-  std::cout << std::endl; // => 0 1 2 3 4
+  // 関数の呼び出し
+  int sum = add(5, 3);
+  std::cout << "Sum: " << sum << std::endl;
 
-  // while ループ
-  std::cout << "While Loop:" << std::endl;
-  int j = 0;
-  while (j < 9) {
-    std::cout << j << " ";
-    j ++;
-  }
-  std::cout << std::endl; // => 0 1 2 3 4 5 6 7 8
+  greet("C++ Beginner");
 
-  // do-while ループ
-  std::cout << "Do-while Loop:" << std::endl;
-  int k = 0;
-  do {
-    std:: cout << k << " ";
-    k++;
-  } while (k < 6);
-  std::cout << std::endl; // => 0 1 2 3 4 5
+  int scores[] = {85, 90, 78, 92, 88};
+  double avg = calculateAverage(scores, 5);
+  std::cout << "Average score: " << avg << std::endl; // => Average score: 86.6
 
   return 0;
+}
+
+// 関数の定義
+int add(int a, int b) {
+  return a + b;
+}
+
+void greet(std::string name) {
+  std::cout << "Hello, " << name << "!" << std::endl;
+}
+
+double calculateAverage(int arr[], int size) {
+  int sum = 0;
+  for (int i = 0; i < size; i++) {
+    sum += arr[i];
+  }
+
+  // static_cast<double>(sum) はC++の型変換（タイプキャスト
+  // 整数型の sum を浮動小数点型の double に変換しています
+  return static_cast<double>(sum) / size;
 }

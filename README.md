@@ -5,7 +5,7 @@
 cd ファイルのあるディレクトリ
 
 # コンパイル
-g++ -o pro main.cpp
+g++ -std=c++11 sample7.cpp -o pro
 
 # 実行
 ./pro
