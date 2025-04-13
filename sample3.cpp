@@ -22,11 +22,20 @@ int main() {
 
   // switch分
   // break の役割： case で条件に一致した部分を実行した後、switch 文全体から抜け出します。 もし break がないと、その下にある全ての case の処理も続けて実行されてしまいます（これを「フォールスルー」と呼びます）
-  int day = 3;
+  int day = 2;
   switch (day) {
     case 1:
-      std::cout << "monday" << std::endl;
+      std::cout << "Monday" << std::endl;
       break;
+    case 2:
+      std::cout << "Tuesday" << std::endl;
+      break;
+    case 3:
+      std::cout << "Wednesday" << std::endl;
+      break;
+    // 他の曜日も同様に...
+    default:
+      std::cout << "Invalid day" << std::endl;
   }
 
   return 0;
